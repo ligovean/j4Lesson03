@@ -17,7 +17,7 @@ public class StackImpl<E> implements Stack<E> {
 
     public E pop() {
         if (isEmpty()) return null;
-        return data[size--];
+        return data[--size];
     }
 
     public E peek() {
@@ -35,5 +35,17 @@ public class StackImpl<E> implements Stack<E> {
 
     public boolean isFull() {
             return size == data.length;
+    }
+
+    @Override
+    public String toString() {
+        if (isEmpty()) return "Empty stack";
+        String result = "{";
+        for (int i = 0; i < size; i++) {
+            if (i==0) result += data[i];
+            else result += ","+data[i];
+        }
+        result +="}";
+        return result;
     }
 }
