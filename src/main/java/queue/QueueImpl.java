@@ -17,33 +17,59 @@ public class QueueImpl<E> implements Queue<E>{
 
     public boolean insert(E val) {
         if (isFull()) return false;
-        if (tale+1 == data.length){
+        if (tale+1 == data.length)
             tale = DEFAULT_TAIL;
-        }
         data[++tale] = val;
         size++;
         return true;
     }
 
     public E remove() {
+        if(isEmpty()) return null;
+        if(head == data.length)
+            head = DEFAULT_HEAD;
         E result = data[head++];
         size--;
         return result;
     }
 
     public E peekFront() {
-        return null;
+        if(isEmpty()) return null;
+        return data[head];
     }
 
     public int size() {
-        return 0;
+        return size;
     }
 
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     public boolean isFull() {
-        return false;
+        return size == data.length;
+    }
+
+    @Override
+    public String toString() {
+        if (isEmpty()) return "Empty queue";
+        String result = "{";
+        if (head<=tale) {
+            for (int i = head; i <= tale; i++) {
+                if (i == head) result += data[i];
+                else result += "," + data[i];
+            }
+        }else {
+            for (int i = head; i < data.length; i++) {
+                if (i == head) result += data[i];
+                else result += "," + data[i];
+            }
+            for (int i = 0; i <= tale; i++) {
+                result += "," + data[i];
+            }
+
+        } //TODO
+        result +="}";
+        return result;
     }
 }
