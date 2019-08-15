@@ -19,9 +19,9 @@ public class ReverseWords {
             if (x==10) break;
             st1.push(x);
         }
+        System.out.println();
 
         //Вывод из стека в консоль
-        System.out.println();
         System.out.println("Перевернутая фраза:");
         while (!st1.isEmpty()){
             System.out.print(st1.pop());
