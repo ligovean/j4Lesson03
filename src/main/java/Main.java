@@ -3,7 +3,7 @@ import queue.QueueImpl;
 import stack.Stack;
 import stack.StackImpl;
 
-
+//Задание 1. Реализовать рассмотренные структуры данных в консольных программах (или протестировать с JUnit).
 public class Main {
     public static void main(String[] args) {
         int i=0;
