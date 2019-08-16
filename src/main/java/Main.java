@@ -86,7 +86,7 @@ public class Main {
 
 
         //Задание 3. Создать класс для реализации дека.
-        System.out.println("====================Дек====================");
+        System.out.println("====================ДЕК====================");
         System.out.println("Создание структуры Дек на 10 элементов");
 
         DequeImpl<Integer> dc1 = new DequeImpl<Integer>(10);
@@ -137,7 +137,7 @@ public class Main {
         System.out.printf("Размер очереди: %s\n", dc1.size());
         System.out.println();
 
-        System.out.println("Вставка в очередь слева. " + dc1.insertL(999));
+        System.out.println("Вставка в очередь справа. " + dc1.insert(999));
         System.out.printf("Текущая очередь: %s\n", dc1);
         System.out.printf("Размер очереди: %s\n", dc1.size());
         System.out.println();
