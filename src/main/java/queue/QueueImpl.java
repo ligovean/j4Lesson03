@@ -1,12 +1,12 @@
 package queue;
 
 public class QueueImpl<E> implements Queue<E>{
-    private static final int DEFAULT_HEAD = 0;
-    private static final int DEFAULT_TAIL = -1;
-    private final E[] data;
-    private int size;
-    private int head;
-    private int tale;
+    protected static final int DEFAULT_HEAD = 0;
+    protected static final int DEFAULT_TAIL = -1;
+    protected final E[] data;
+    protected int size;
+    protected int head;
+    protected int tale;
 
     @SuppressWarnings("unchecked")
     public QueueImpl(int maxCapacity) {

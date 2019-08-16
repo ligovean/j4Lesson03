@@ -1,3 +1,4 @@
+import deque.DequeImpl;
 import queue.Queue;
 import queue.QueueImpl;
 import stack.Stack;
@@ -81,6 +82,79 @@ public class Main {
         System.out.printf("Извлечение из очереди: %d\n", qu1.remove());
         System.out.printf("Текущая очередь: %s\n", qu1);
         System.out.printf("Размер очереди: %s\n", qu1.size());
+        System.out.println();
+
+
+        //Задание 3. Создать класс для реализации дека.
+        System.out.println("====================Дек====================");
+        System.out.println("Создание структуры Дек на 10 элементов");
+
+        DequeImpl<Integer> dc1 = new DequeImpl<Integer>(10);
+
+        System.out.println("Заполнение очереди");
+        i=0;
+        while (!dc1.isFull()){
+            dc1.insert(++i);
+        }
+        System.out.println();
+
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.printf("Извлечение из очереди справа: %d\n", dc1.removeR());
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.printf("Извлечение из очереди справа: %d\n", dc1.removeR());
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.printf("Извлечение из очереди слева: %d\n", dc1.remove());
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.printf("Извлечение из очереди справа: %d\n", dc1.removeR());
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.println("Вставка в очередь справа. " + dc1.insert(15));
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.println("Вставка в очередь слева. " + dc1.insertL(22));
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.println("Вставка в очередь слева. " + dc1.insertL(100));
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.println("Вставка в очередь слева. " + dc1.insertL(999));
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.println("Вставка в очередь слева. " + dc1.insertL(888));
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.printf("Извлечение из очереди слева: %d\n", dc1.remove());
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
+        System.out.println();
+
+        System.out.println("Вставка в очередь слева. " + dc1.insertL(888));
+        System.out.printf("Текущая очередь: %s\n", dc1);
+        System.out.printf("Размер очереди: %s\n", dc1.size());
         System.out.println();
     }
 }
