@@ -98,6 +98,7 @@ public class Main {
         }
         System.out.println();
 
+        //System.out.println("Head: " + dc1.getHead() + ", Tale: " +dc1.getTale());
         System.out.printf("Текущая очередь: %s\n", dc1);
         System.out.printf("Размер очереди: %s\n", dc1.size());
         System.out.println();
@@ -123,6 +124,7 @@ public class Main {
         System.out.println();
 
         System.out.println("Вставка в очередь справа. " + dc1.insert(15));
+        System.out.println("Head: " + dc1.getHead() + ", Tale: " +dc1.getTale());
         System.out.printf("Текущая очередь: %s\n", dc1);
         System.out.printf("Размер очереди: %s\n", dc1.size());
         System.out.println();

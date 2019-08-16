@@ -50,6 +50,23 @@ public class QueueImpl<E> implements Queue<E>{
         return size == data.length;
     }
 
+    public String getData(){
+        String result="{";
+        for (E value:data) {
+            result +=(", " + value);
+        }
+        result +="}";
+        return result;
+    }
+
+    public int getHead(){
+        return head;
+    }
+
+    public int getTale(){
+        return tale;
+    }
+
     @Override
     public String toString() {
         if (isEmpty()) return "Empty queue";
@@ -60,15 +77,17 @@ public class QueueImpl<E> implements Queue<E>{
                 else result += "," + data[i];
             }
         }else {
+
             for (int i = head; i < data.length; i++) {
                 if (i == head) result += data[i];
                 else result += "," + data[i];
             }
             for (int i = 0; i <= tale; i++) {
-                result += "," + data[i];
+                if (i==head) result += data[i];
+                else result += "," + data[i];
             }
 
-        } //TODO
+        }
         result +="}";
         return result;
     }
