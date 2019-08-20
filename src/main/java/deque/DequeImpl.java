@@ -20,7 +20,7 @@ public class DequeImpl<E> extends QueueImpl<E> implements Deque<E>{
 
     public E removeR() {
         if(isEmpty()) return null;
-        if (tale < 0)
+        if (tale == 0)
             tale=data.length-1;
         E result = data[tale--];
         size--;
@@ -28,6 +28,7 @@ public class DequeImpl<E> extends QueueImpl<E> implements Deque<E>{
     }
 
     public E peekFrontR() {
-        return null;
+        if(isEmpty()) return null;
+        return data[tale];
     }
 }
